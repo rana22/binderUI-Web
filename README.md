@@ -1,4 +1,5 @@
 #Binder UI
+
 This is angular cli project (angular 2). This UI app is for the Java app DocBinder. (https://github.com/rana22/DocBinder.git).
 
 Set UP:
@@ -12,4 +13,4 @@ npm install
 npm start
 ```
 
-##Set Up for DocBinder before setting up.
+--Set Up for DocBinder before setting up.
