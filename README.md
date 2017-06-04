@@ -12,4 +12,4 @@ npm install
 npm start
 ```
 
-Please follow the set for DocBinder before setting up.
+##Set Up for DocBinder before setting up.
