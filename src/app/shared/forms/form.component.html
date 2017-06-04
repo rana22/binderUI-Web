@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit(f.value)" #f="ngForm" enctype="multipart/form-data">
+
+	<div class="form-group"> <!-- Name field -->
+		<label class="control-label " for="name">FileName: </label>
+		<input class="form-control" id="name" ngModel name="name" type="text"/>
+	</div>
+	
+
+	<div class="form-group">
+		<label class="control-label" >Category</label>
+		<select name="category" ngModel>
+			<option>Grocery</option>
+			<option>Bills</option>
+			<option>Education</option>
+			<option>Tax</option>
+		</select>
+	</div>
+
+	<!-- <div>
+		upload file:
+		<input type="date" ngModel name="fileDate">
+	</div> -->
+	<div class="form-group">
+		<label class="control-label" >Short Description: </label>
+		<input type="text" class="form-control" ngModel name="description">
+	</div>
+
+	<div>
+		<input type="file" name="file" ngModel id="file" class="inputfile" (change)="fileChange($event)" accept=".pdf, .doc, .docx, .png, .jpg">	
+	</div>
+
+	<div class="form-group"> 
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" class="btn btn-default">Submit</button>
+	    </div>
+  	</div>
+
+</form>
+
+

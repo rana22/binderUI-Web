@@ -1,0 +1,60 @@
+<div id="filter" class="row">
+	<div class="col-md-12">
+		<p> Filter Documents:</p>
+		<div class="form-group">
+	  		<input type="text" class="form-control" id="usr" placeholder="Filter by file name, type, category">
+	  	</div>
+	  	<div class="col-md-2">
+		  	<p> Sort By Category:</p>
+	  	</div>
+	  	<div class="form-group col-md-2">
+
+	  		<div class="checkbox">
+		  		<label><input type="checkbox" value="">Bills</label>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">Education</label>
+			</div>
+			<div class="checkbox disabled">
+			  <label><input type="checkbox" value="" disabled>Grocery</label>
+			</div>
+	  		
+	  	</div>
+
+	  	<div class="form-group col-md-2">
+
+	  		<div class="checkbox">
+		  		<label><input type="checkbox" value="">Bank</label>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">Insurance</label>
+			</div>
+			<div class="checkbox disabled">
+			  <label><input type="checkbox" value="" disabled>Health</label>
+			</div>
+	  		
+	  	</div>
+	  	<div class="col-md-2">
+		  	<p> Sort By Date:</p>
+	  	</div>
+	  	<div class="col-md-2">
+	  		<label>
+	  			From:
+	  		</label><input type="date" name="bday">
+	  	</div>
+	  	<div class="col-md-2">
+	  		<label>To: </label>
+	  		<input type="date" name="bday">
+	  	</div>
+
+	</div>
+</div>
+
+
+<div id="documents" *ngFor="let obj of imageArray">
+	<div class="col-md-4">
+			<img src="{{obj.image}}" width="250px">
+			<p> {{obj.name}}</p>
+	</div>
+</div>
+ 
