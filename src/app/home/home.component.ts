@@ -12,6 +12,8 @@ import  {HttpService } from '../services/http/http.service';
 export class HomeComponent implements OnInit {
 
 	response: any;
+  searchQuery: string ='';
+  query: string ='';
 
 	imageArray : Array<any> = [];
 
@@ -27,5 +29,11 @@ export class HomeComponent implements OnInit {
   				)
   		)
   }
+
+  getQuery(){
+    console.log(this.query);
+    this.searchQuery = this.query;
+  }
+
 
 }

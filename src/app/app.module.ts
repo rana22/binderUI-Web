@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RoutesModule } from './services/routes/routes.module';
 import { FormComponent } from './shared/forms/form.component';
+import { FilterPipe } from './services/utilities/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { FormComponent } from './shared/forms/form.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RoutesModule
+    RoutesModule,
+    NgxPaginationModule
   ],
   providers: [
   {

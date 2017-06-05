@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<p> Filter Documents:</p>
 		<div class="form-group">
-	  		<input type="text" class="form-control" id="usr" placeholder="Filter by file name, type, category">
+	  		<input type="text" [(ngModel)]="query" class="form-control" id="usr" placeholder="Filter by file name, type, category" (keyup.enter)="getQuery()">
 	  	</div>
 	  	<div class="col-md-2">
 		  	<p> Sort By Category:</p>
@@ -51,10 +51,12 @@
 </div>
 
 
-<div id="documents" *ngFor="let obj of imageArray">
+<div id="documents" *ngFor="let obj of imageArray | filter: searchQuery |paginate: { itemsPerPage: 5, currentPage: p }">
 	<div class="col-md-4">
 			<img src="{{obj.image}}" width="250px">
 			<p> {{obj.name}}</p>
 	</div>
+
 </div>
  
+	 <pagination-controls (pageChange)="p = $event"></pagination-controls>
