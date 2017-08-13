@@ -16,20 +16,16 @@ export class FormComponent implements OnInit {
   file: File;
 
   public FormBuilder: FormBuilder;
-  public formData1 : FormData;
 
   onSubmit(value){
-  	value.file = this.file;
-  	
+    value.file =this.file;
 
-  	let formData: FormData= new FormData();
-  	formData.append('file', this.file, this.file.name);
-  	formData.append('name', value.name);
-  	formData.append('category', value.category);
+    let formData : FormData  = new FormData();
+    formData.append('file', this.file, this.file.name);
+    formData.append('name' , value.name);
+    formData.append('category' , value.category);
 
-    console.log(formData);
-
-  	this.http.post('/saveImg', formData)
+  	this.http.post('http://localhost:8090/users/document/saveImg', formData)
   	.subscribe(
   		res=>console.log(res)
   		)

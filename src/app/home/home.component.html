@@ -1,6 +1,11 @@
 <div id="filter" class="row">
 	<div class="col-md-12">
+		<div id="utilites">
+			<i>Collapse</i>
+			<i>Expand</i> 
+		</div>
 		<p> Filter Documents:</p>
+
 		<div class="form-group">
 	  		<input type="text" [(ngModel)]="query" class="form-control" id="usr" placeholder="Filter by file name, type, category" (keyup.enter)="getQuery()">
 	  	</div>
@@ -57,6 +62,11 @@
 			<p> {{obj.name}}</p>
 	</div>
 
-</div>
- 
-	 <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div >
+<div class="row" id="pagination">
+	 <div class="col-md-12">
+	 	<pagination-controls (pageChange)="p = $event"></pagination-controls>
+	 </div>
+ </div>
+
+

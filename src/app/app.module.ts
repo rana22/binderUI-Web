@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
-import { httpFactory } from './services/http/http.factory';
 import { HttpService } from './services/http/http.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -30,12 +29,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RoutesModule,
     NgxPaginationModule
   ],
-  providers: [
-  {
-    provide: Http,
-    useFactory: httpFactory,
-    deps:[XHRBackend, RequestOptions]
-  }, HttpService],
+  providers: [ HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
