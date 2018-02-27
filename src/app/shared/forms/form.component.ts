@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
     formData.append('name' , value.name);
     formData.append('category' , value.category);
 
-  	this.http.post('http://localhost:8090/users/document/saveImg', formData)
+  	this.http.post('http://localhost:8090/users/document/saveDocument', formData)
   	.subscribe(
   		res=>console.log(res)
   		)
