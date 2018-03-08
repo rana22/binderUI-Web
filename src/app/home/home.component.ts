@@ -33,6 +33,15 @@ export class HomeComponent implements OnInit {
   getQuery(){
     // console.log(this.query);
     this.searchQuery = this.query;
+
+    this.httpService.getDocumentsByQuery(this.searchQuery)
+  	.subscribe(
+  			response => response.forEach(
+  				c => this.imageArray.push({image: 'data:image/png;base64,'+c.thumbnail, name: c.title})
+  				// c=>console.log(c))
+  				)
+  		)
+
   }
 
 }

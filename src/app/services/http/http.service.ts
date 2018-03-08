@@ -11,4 +11,10 @@ export class HttpService {
   	.map((response: Response) => response.json());			
   }
 
+  getDocumentsByQuery(query : String){
+    let url : string = 'http://localhost:8090/users/document/query/getDocuments?query=' + query;
+    return this.http.get(url)
+    .map((response: Response) => response.json());
+  }
+
 }
