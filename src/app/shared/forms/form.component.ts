@@ -22,8 +22,9 @@ export class FormComponent implements OnInit {
 
     let formData : FormData  = new FormData();
     formData.append('file', this.file, this.file.name);
-    formData.append('name' , value.name);
+    formData.append('title' , value.name);
     formData.append('category' , value.category);
+    formData.append('description', value.description)
 
   	this.http.post('http://localhost:8090/users/document/saveDocument', formData)
   	.subscribe(
