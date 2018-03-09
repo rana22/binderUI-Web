@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  { Http, Headers } from '@angular/http';
+import  { HttpClient} from '@angular/common/http';
 import  'rxjs/Rx';
 import  {FormBuilder} from '@angular/forms';
 
@@ -11,7 +11,7 @@ import  {FormBuilder} from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   file: File;
 

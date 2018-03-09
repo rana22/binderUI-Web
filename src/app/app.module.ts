@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { HttpService } from './services/http/http.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -25,7 +25,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     RoutesModule,
     NgxPaginationModule
   ],

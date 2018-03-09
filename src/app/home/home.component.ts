@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import  { Http, Headers } from '@angular/http';
+import  { HttpClient} from '@angular/common/http';
 import  'rxjs/Rx';
 import  {HttpService } from '../services/http/http.service';
+import { map, filter, mergeMap, tap } from 'rxjs/operators';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
 
 	imageArray : Array<any> = [];
 
-  constructor(private http : Http, private httpService: HttpService) { }
+  constructor(private http : HttpClient, private httpService: HttpService) { }
 
   ngOnInit() {
 
