@@ -11,6 +11,7 @@ import { RoutesModule } from './services/routes/routes.module';
 import { FormComponent } from './shared/forms/form.component';
 import { FilterPipe } from './services/utilities/filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FooterComponent,
     HomeComponent,
     FormComponent,
+    SidebarComponent,
     FilterPipe
   ],
   imports: [
