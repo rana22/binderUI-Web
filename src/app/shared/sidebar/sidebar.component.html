@@ -1,4 +1,60 @@
 
-<div>
-    <h3>Search/Filter</h3>
+<div id="sidebar-header">
+    <label>Filter or Search By</label>
+</div>
+<hr>
+<div id="sidebar-content">
+    <ul class="list-unstyled components">
+        <li class="active">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="serach by title or description">
+            </div>
+        </li>
+        <hr>
+        <li>
+            <label>Category</label>
+            <ul class="list-unstyled" id="pageSubmenu">
+                <li>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Education</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Tax</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Insurance</label>
+                </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Personal</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">House Hold</label>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <hr>
+        <li>
+            <label>Date</label>
+            <!-- <dl-date-time-picker></dl-date-time-picker> -->
+            <date-picker [subject]="from"></date-picker>
+
+            <date-picker [subject]="to"></date-picker>
+        </li>
+    </ul>
+    <hr>
+
 </div>
