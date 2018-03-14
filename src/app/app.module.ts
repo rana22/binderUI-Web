@@ -14,6 +14,7 @@ import { NgxPaginationModule }                                      from 'ngx-pa
 import { SidebarComponent }                                         from './shared/sidebar/sidebar.component';
 import { NgbModule }                                                from '@ng-bootstrap/ng-bootstrap';
 import { DatePickerComponent }                                      from './shared/date-picker/date-picker.component';
+import { CategoryPipe }                                             from './services/filters/category.pipe';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { DatePickerComponent }                                      from './shar
     FormComponent,
     SidebarComponent,
     FilterPipe,
-    DatePickerComponent
+    DatePickerComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

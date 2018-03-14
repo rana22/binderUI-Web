@@ -25,20 +25,18 @@ export class HomeComponent implements OnInit {
   	this.httpService.getAllDocuments()
   	.subscribe(
   			response => response.forEach(
-  				c => this.imageArray.push({image: 'data:image/png;base64,'+c.thumbnail, name: c.title})
+  				c => this.imageArray.push({image: 'data:image/png;base64,'+c.thumbnail, name: c.title, category: c.category})
   				// c=>console.log(c))
   				)
   		)
   }
 
-  getQuery(){
-    // console.log(this.query);
-    this.searchQuery = this.query;
-
-    this.httpService.getDocumentsByQuery(this.searchQuery)
+  getQuery($event){
+		this.imageArray = [];
+    this.httpService.getDocumentsByQuery($event)
   	.subscribe(
   			response => response.forEach(
-  				c => this.imageArray.push({image: 'data:image/png;base64,'+c.thumbnail, name: c.title})
+  				c => this.imageArray.push({image: 'data:image/png;base64,'+c.thumbnail, name: c.title, category: c.category})
   				// c=>console.log(c))
   				)
   		)

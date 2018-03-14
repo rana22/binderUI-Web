@@ -57,7 +57,7 @@
 <div class="wrapper">
 		<!--  -->
 		<nav id="sidebar">
-				<app-sidebar></app-sidebar>
+				<app-sidebar (search)="getQuery($event)"></app-sidebar>
 				<!-- <div class="sidebar-header">
 						<h3>Bootstrap Sidebar</h3>
 				</div>
@@ -101,9 +101,10 @@
 	
 			</div> -->
 			<div class="row">
-					<div class="document" *ngFor="let obj of imageArray | filter: searchQuery |paginate: { itemsPerPage: 5, currentPage: p }">
+					<div class="document" *ngFor="let obj of imageArray | paginate: { itemsPerPage: 5, currentPage: p }">
 							<img src="{{obj.image}}">
 							<p> {{obj.name}}</p>
+							<p>{{obj.category | category}}</p>
 					</div>
 			</div>
 

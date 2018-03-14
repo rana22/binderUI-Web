@@ -7,7 +7,7 @@
     <ul class="list-unstyled components">
         <li class="active">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="serach by title or description">
+                <input type="text" [(ngModel)]="query" class="form-control" placeholder="serach by title or description" (keyup.enter)="searchQuery()">
             </div>
         </li>
         <hr>

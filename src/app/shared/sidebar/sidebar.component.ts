@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,8 +10,16 @@ export class SidebarComponent implements OnInit {
   constructor() { }
   from : string = "From";
   to : string = "To";
+  query: string ='';
+
+  @Output() search : EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
+  }
+
+  searchQuery(){
+    console.log("seach query ", this.query);
+    this.search.emit(this.query);
   }
 
 }
